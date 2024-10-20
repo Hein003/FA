@@ -1,4 +1,5 @@
 Sports Dashboard Android App
+
 Overview
 The Sports Dashboard app is an Android application designed to provide users with an intuitive interface to log in and explore a list of sports. Each sport entry offers details such as the number of players, field type, and whether it is an Olympic sport. Users can tap on individual sports to view more detailed information.
 
