@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color><!-- Example Primary Color -->
+    <color name="colorAccent">#03DAC5</color> <!-- Example Accent Color -->
+    <color name="lightGray">#F9F9F9</color> <!-- Light Gray Color for background -->
+    <color name="customGrey">#A9A9A9</color> <!-- Custom grey color -->
+    <color name="customBlack">#000000</color>
+    <color name="Green">#008000</color><!-- Custom black color -->
+</resources>
