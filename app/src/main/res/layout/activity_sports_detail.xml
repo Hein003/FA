@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Sport Name -->
+    <TextView
+        android:id="@+id/tvSportName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sport Name"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/customBlack"
+        android:paddingBottom="10dp"/>
+
+    <!-- Player Count -->
+    <TextView
+        android:id="@+id/tvPlayerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Count"
+        android:textSize="20sp"
+        android:textColor="@color/customGrey"
+        android:paddingBottom="15dp"/>
+
+    <!-- Field Type -->
+    <TextView
+        android:id="@+id/tvFieldType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Field Type"
+        android:textSize="20sp"
+        android:textColor="@color/customGrey"
+        android:paddingBottom="15dp"/>
+
+    <!-- Olympic Sport -->
+    <TextView
+        android:id="@+id/tvOlympicSport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olympic Sport: Yes/No"
+        android:textSize="20sp"
+        android:textColor="@color/customGrey"
+        android:paddingBottom="8dp"/>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="18sp"
+        android:paddingBottom="16dp"
+        android:textColor="@color/customBlack"
+        android:background="@drawable/description_background"
+        android:padding="10dp"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBackToDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/Green"
+        android:onClick="goBackToDashboard"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
