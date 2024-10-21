@@ -14,39 +14,40 @@ import org.json.JSONObject
 import java.io.IOException
 
 class LoginViewModel : ViewModel() {
-    private val client = OkHttpClient()
+    private val client = OkHttpClient()  // OkHttpClient instance for network calls
 
-    private val _loginResult = MutableLiveData<Boolean>()
-    val loginResult: LiveData<Boolean> get() = _loginResult
+    private val _loginResult = MutableLiveData<Boolean>()  // LiveData for login success status
+    val loginResult: LiveData<Boolean> get() = _loginResult  // Exposed LiveData
 
-    private val _errorMessage = MutableLiveData<String>()
-    val errorMessage: LiveData<String> get() = _errorMessage
+    private val _errorMessage = MutableLiveData<String>()  // LiveData for error messages
+    val errorMessage: LiveData<String> get() = _errorMessage  // Exposed LiveData
 
     fun login(username: String, password: String) {
-        val url = "https://nit3213-api-h2b3-latest.onrender.com/footscray/auth"
+        val url = "https://nit3213-api-h2b3-latest.onrender.com/footscray/auth"  // API endpoint for login
 
-        val jsonObject = JSONObject()
-        jsonObject.put("username", username)
-        jsonObject.put("password", password)
+        val jsonObject = JSONObject().apply {
+            put("username", username)  // Add username to JSON object
+            put("password", password)  // Add password to JSON object
+        }
 
-        val requestBody = jsonObject.toString().toRequestBody("application/json".toMediaType())
+        val requestBody = jsonObject.toString().toRequestBody("application/json".toMediaType())  // Create request body
 
         val request = Request.Builder()
-            .url(url)
-            .post(requestBody)
-            .build()
+            .url(url)  // Set the URL
+            .post(requestBody)  // Set the request method to POST with the request body
+            .build()  // Build the request
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-                _errorMessage.postValue("Network Error")
+                _errorMessage.postValue("Network Error")  // Post network error message
             }
 
             override fun onResponse(call: Call, response: Response) {
                 if (response.isSuccessful) {
-                    _loginResult.postValue(true)
+                    _loginResult.postValue(true)  // Post success status
                 } else {
-                    _loginResult.postValue(false)
-                    _errorMessage.postValue("Invalid Credentials")
+                    _loginResult.postValue(false)  // Post failure status
+                    _errorMessage.postValue("Invalid Credentials")  // Post error message for invalid credentials
                 }
             }
         })

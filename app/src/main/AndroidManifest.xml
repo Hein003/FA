@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- src/main/AndroidManifest.xml -->
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <!-- Permission to access the internet -->
 
     <application
         android:allowBackup="true"
@@ -16,16 +15,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalAssigment"
         tools:targetApi="31">
-        <activity android:name=".LoginActivity"
-            android:exported="true">
+
+        <activity android:name=".LoginActivity" android:exported="true">
+            <!-- Main entry point of the application -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <!-- Specifies the main action -->
                 <category android:name="android.intent.category.LAUNCHER" />
+                <!-- Defines the activity as a launcher -->
             </intent-filter>
         </activity>
 
         <activity android:name=".SportDetailActivity" />
+        <!-- Activity for displaying sports details -->
+
         <activity android:name=".MainActivity" />
+        <!-- Main activity of the application -->
 
     </application>
 
